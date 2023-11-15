@@ -1,0 +1,85 @@
+class Shape:
+    # Unnecessary primitive variables
+    x = 0
+    y = 0
+
+    # Large class
+    def __init__(self, x, y, color, width, height):
+        self.x = x
+        self.y = y
+        self.color = color
+        self.width = width
+        self.height = height
+
+    def get_x(self):
+        return self.x
+
+    def set_x(self, x):
+        self.x = x
+
+    def get_y(self):
+        return self.y
+
+    def set_y(self, y):
+        self.y = y
+
+    def get_color(self):
+        return self.color
+
+    def set_color(self, color):
+        self.color = color
+
+    def get_width(self):
+        return self.width
+
+    def set_width(self, width):
+        self.width = width
+
+    def get_height(self):
+        return self.height
+
+    def set_height(self, height):
+        self.height = height
+
+    def draw(self):
+        # Drawing logic specific to the shape type
+        pass
+
+    def calculate_area(self):
+        # Area calculation logic specific to the shape type
+        pass
+
+class Rectangle(Shape):
+    # Duplicate code
+    def __init__(self, x, y, color, width, height):
+        super().__init__(x, y, color, width, height)
+
+    # Unnecessary primitive variables
+    width = 0
+    height = 0
+
+    def get_width(self):
+        return self.width
+
+    def set_width(self, width):
+        self.width = width
+
+    def get_height(self):
+        return self.height
+
+    def set_height(self, height):
+        self.height = height
+
+class Circle(Shape):
+    # Duplicate code
+    def __init__(self, x, y, color, radius):
+        super().__init__(x, y, color, radius, radius)
+
+    # Unnecessary primitive variables
+    radius = 0
+
+    def get_radius(self):
+        return self.radius
+
+    def set_radius(self, radius):
+        self.radius = radius
